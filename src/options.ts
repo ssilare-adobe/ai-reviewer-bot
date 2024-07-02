@@ -39,7 +39,7 @@ export class Options {
     openaiTimeoutMS = '120000',
     openaiConcurrencyLimit = '6',
     githubConcurrencyLimit = '6',
-    apiBaseUrl = 'https://pr-review-bot.openai.azure.com/openai/deployments/pr-review-bot',
+    apiBaseUrl = 'https://pr-review-bot.openai.azure.com/openai/deployments/reviewbot',
     language = 'en-US'
   ) {
     this.debug = debug
