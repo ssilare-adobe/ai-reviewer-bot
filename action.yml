@@ -147,16 +147,16 @@ inputs:
   openai_base_url:
     required: false
     description: 'The url of the openai api interface.'
-    default: 'https://pr-review-bot.openai.azure.com/openai/deployments/pr-review-bot'
+    default: 'https://pr-review-bot.openai.azure.com/openai/deployments/reviewbot'
   openai_light_model:
     required: false
     description:
       'Model to use for simple tasks like summarizing diff on a file.'
-    default: 'gpt-4o'
+    default: 'gpt-35-turbo-instruct'
   openai_heavy_model:
     required: false
     description: 'Model to use for complex tasks such as code reviews.'
-    default: 'gpt-4o'
+    default: 'gpt-35-turbo-instruct'
   openai_model_temperature:
     required: false
     description: 'Temperature for GPT model'
