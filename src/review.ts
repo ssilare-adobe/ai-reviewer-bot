@@ -176,11 +176,20 @@ export const codeReview = async (
         // retrieve file contents
         info("Find hunks to review:" + file.filename)
         let fileContent = ''
+        info("Context payload data: " + JSON.stringify(context.payload.pull_request));
+
         if (context.payload.pull_request == null) {
           warning('Skipped: context.payload.pull_request is null')
           return null
         }
         try {
+          const data = {
+            owner: repo.owner,
+            repo: repo.repo,
+            path: file.filename,
+            ref: context.payload.pull_request.base.sha
+          };
+          info("Octokit data:" + JSON.stringify(data));
           const contents = await octokit.repos.getContent({
             owner: repo.owner,
             repo: repo.repo,
@@ -205,7 +214,7 @@ export const codeReview = async (
           }
         } catch (e: any) {
           warning(
-            `Failed to get file contents: ${
+            `${file.filename}: Failed to get file contents: ${
               e as string
             }. This is OK if it's a new file.`
           )
