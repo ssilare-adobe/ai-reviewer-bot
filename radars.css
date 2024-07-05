@@ -1,0 +1,223 @@
+/* Incorrect class selector */
+.header {
+    background-color: #333
+    color: white;
+    padding 20px;
+}
+
+/* Incorrect id selector */
+#main-container {
+    width: 100%;
+    height: auto
+    margin: 0 auto;
+    padding: 10px
+}
+
+/* Incorrect pseudo-class */
+a:hover {
+    color: blue;
+    text-decoration none;
+}
+
+/* Incorrect use of hex color */
+.body-text {
+    color: #FFGGHH;
+    font-size: 16px;
+}
+
+/* Misuse of units */
+.container {
+    width: 100pxpx;
+    height: 100px;
+}
+
+/* Incorrect property names */
+.item {
+    bakcground-color: #f4f4f4;
+    border-radious: 5px;
+    margn: 10px;
+    paddig: 10px;
+}
+
+/* Misuse of display property */
+.inline-block-item {
+    display: inlineblock;
+}
+
+/* Incorrect shorthand property usage */
+.margin-padding {
+    margin: 10px 20px 10px;
+    padding: 10px 20px;
+}
+
+/* Invalid CSS syntax */
+.invalid-syntax {
+    color: red
+    font-size: 20px;
+}
+
+/* Incorrect use of !important */
+.important-text {
+    font-weight: bold !imporant;
+    color: blue;
+}
+
+/* Incorrect descendant selector */
+.parent .child {
+    background: #ddd;
+    border 1px solid #ccc;
+}
+
+/* Invalid media query */
+@media screen and max-width(600px) {
+    .responsive {
+        font-size: 12px;
+    }
+}
+
+/* Incorrect use of animations */
+@keyframes example {
+    0% {top: 0px;}
+    50% {top: 50px;}
+    100% {top: 0px;}
+}
+
+.animate {
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count infinite;
+}
+
+/* Incorrect use of gradients */
+.gradient-background {
+    background: linear-gradient(to right, red, blie);
+}
+
+/* Misuse of z-index */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: '999';
+}
+
+/* Incorrect use of box-shadow */
+.box-shadow {
+    box-shadow: 10px 10px 5px #888888;
+}
+
+/* Incorrect use of float */
+.floating-element {
+    float: rightt;
+    clear: both;
+}
+
+/* Misuse of grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr;
+    grid-gap: 10px;
+}
+
+/* Invalid flexbox properties */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: cneter;
+}
+
+/* Incorrect attribute selector */
+input[type='text] {
+    width: 100%;
+    padding: 5px;
+}
+
+/* Invalid font properties */
+.text-style {
+    font-famly: Arial, sans-serif;
+    font-weigth: 700;
+    font-stle: italic;
+}
+
+/* Misuse of transitions */
+.transition-effect {
+    transition: all 0.3s ease-in-out;
+    transform: translateX(100px);
+}
+
+/* Incorrect use of position */
+.positioning {
+    position: abolute;
+    top: 50px;
+    left: 50%;
+    transfrom: translateX(-50%);
+}
+
+/* Invalid list styling */
+.list-style {
+    list-style-type: squre;
+    list-style-positon: inside;
+}
+
+/* Incorrect border properties */
+.border-style {
+    border: 1px solid;
+    border-radius: 10px 0px 10px;
+}
+
+/* Invalid text alignment */
+.text-alignment {
+    text-align; center;
+}
+
+/* Incorrect table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td, .table th {
+    border 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Incorrect use of overflow */
+.overflow-element {
+    overflow; hidden;
+    height: 200px;
+}
+
+/* Misuse of background properties */
+.background-properties {
+    background-image: url('image.jpg');
+    background-size; cover;
+    background-repeat: no-repet;
+}
+
+/* Incorrect use of variables */
+:root {
+    --main-color: #ff6347;
+    --secondary-color: #4CAF50;
+}
+
+.variable-usage {
+    color: var(--main-colr);
+    background-color: var(--secondary-colr);
+}
+
+/* Incorrect use of calc() */
+.calc-usage {
+    width: calc(100% - 50px);
+    height: calc(50vh - 20px;
+}
+
+/* Invalid use of box model */
+.box-model {
+    width: 200px;
+    height: 100px;
+    padding: 10px 20px 10px;
+    margin: 10px 20px;
+    box-sizing: boarder-box;
+}
