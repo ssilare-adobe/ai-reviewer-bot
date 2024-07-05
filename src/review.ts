@@ -194,7 +194,7 @@ export const codeReview = async (
             owner: repo.owner,
             repo: repo.repo,
             path: file.filename,
-            ref: context.payload.pull_request.base.sha
+            ref: context.payload.pull_request.head.sha
           })
           info("Contents data: " + JSON.stringify(contents));
           if (contents.data != null) {
