@@ -174,6 +174,7 @@ export const codeReview = async (
     filterSelectedFiles.map(file =>
       githubConcurrencyLimit(async () => {
         // retrieve file contents
+        info("Find hunks to review:" + file.filename)
         let fileContent = ''
         if (context.payload.pull_request == null) {
           warning('Skipped: context.payload.pull_request is null')
@@ -186,7 +187,9 @@ export const codeReview = async (
             path: file.filename,
             ref: context.payload.pull_request.base.sha
           })
+          info("Contents data: " + JSON.stringify(contents));
           if (contents.data != null) {
+            info("Contents data: " + contents.data)
             if (!Array.isArray(contents.data)) {
               if (
                 contents.data.type === 'file' &&
@@ -196,6 +199,7 @@ export const codeReview = async (
                   contents.data.content,
                   'base64'
                 ).toString()
+                info("File Content:" + contents.data)
               }
             }
           }
@@ -210,6 +214,7 @@ export const codeReview = async (
         let fileDiff = ''
         if (file.patch != null) {
           fileDiff = file.patch
+          info("File Diff: " + fileDiff);
         }
 
         const patches: Array<[number, number, string]> = []
