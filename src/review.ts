@@ -151,6 +151,7 @@ export const codeReview = async (
       filterIgnoredFiles.push(file)
     } else {
       filterSelectedFiles.push(file)
+      info(`filesSelected: ${filterSelectedFiles.length}`);
     }
   }
 
