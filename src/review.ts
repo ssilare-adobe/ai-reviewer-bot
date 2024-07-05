@@ -174,7 +174,7 @@ export const codeReview = async (
     filterSelectedFiles.map(file =>
       githubConcurrencyLimit(async () => {
         // retrieve file contents
-        info("Find hunks to review:" + file.filename)
+        info("Find hunks to review:" + JSON.stringify(file));
         let fileContent = ''
         info("Context payload data: " + JSON.stringify(context.payload.pull_request));
 
@@ -194,7 +194,7 @@ export const codeReview = async (
             owner: repo.owner,
             repo: repo.repo,
             path: file.filename,
-            ref: context.payload.pull_request.head.sha
+            ref: context.payload.pull_request.base.sha
           })
           info("Contents data: " + JSON.stringify(contents));
           if (contents.data != null) {
