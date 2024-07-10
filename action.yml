@@ -213,6 +213,7 @@ inputs:
       - Decorate method can be used to add classes or id for styling or functionality.
       - CSS content for the block should have fixed height and width to ensure proper display. Styles should not be present in the JavaScript file; use the CSS file for styling only.
       - JavaScript Functionality:
+        - Only vanilla javascript should be used for block functionality. JQuery or other libraries should not be used.
         - An Edge Delivery Services block JavaScript file must start with a function called 'decorate'. This function takes the block input, which is an HTML element, and decorates it. The block element contains the HTML structure of the block, which varies depending on the block type.
         - Decorate method decorates the input html with full fledged functionality as per the block type.
       
