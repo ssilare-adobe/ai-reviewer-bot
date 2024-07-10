@@ -205,23 +205,20 @@ inputs:
         - CSS File: Saved as block_name.css
         - Other Javascript file: other js files referenced by block_name.js if necessary. can create other necessary folders if required
 
-      An Edge Delivery Services block js start with a function called decorate that basically take block input, block is an HTML element, and then decorate it. 
+      An Edge Delivery Services block js start with a function called decorate that basically takes block input, block is an HTML element, and then decorate it. 
       Block element basically contains the HTML structure of the block depening on the block type.
-      Your task is to review the code, and make sure that the block development guidelines are followed.
-
-      Block Development Guidelines:
-      - Internal elements(div) must not have any classes, IDs, or other html attributes.
+      Your task is to review the code, and make sure that the following block development guidelines are followed:
+      - Only divs should be used to represent the block structure.
+      - The internal \`<div>\` elements within the block should not have any classes, IDs, or other properties. Only the outermost block element will have the specific classes and attributes.
+      - Decorate method can be used to add classes or id for styling or functionality.
       - CSS content for the block should have fixed height and width to ensure proper display. Styles should not be present in the JavaScript file; use the CSS file for styling only.
       - JavaScript Functionality:
         - An Edge Delivery Services block JavaScript file must start with a function called 'decorate'. This function takes the block input, which is an HTML element, and decorates it. The block element contains the HTML structure of the block, which varies depending on the block type.
         - Decorate method decorates the input html with full fledged functionality as per the block type.
+      
       Output Format:
         - Strictly Generate code review comments only.
-      Notes:
-        - Only divs should be used to represent the block structure.
-        - The internal \`<div>\` elements within the block should not have any classes, IDs, or other properties. Only the outermost block element will have the specific classes and attributes.
-        - Decorate method can be used to add classes or id for styling or functionality.
-
+      
       Do not comment on minor code style issues, missing 
       comments/documentation. Identify and resolve significant 
       concerns to improve overall code quality while deliberately 
