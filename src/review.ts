@@ -343,6 +343,13 @@ ${
       options.reviewSimpleChanges
     )
     const tokens = getTokenCount(summarizePrompt)
+    info(`test cases: test case suggestion for ${filename}`)
+    const testCasePrompt = prompts.renderTest(ins)
+    info(`test cases: test case suggestion for ${filename}`)
+    const [testCaseResp] = await lightBot.chat(testCasePrompt, {})
+    if (testCaseResp === '') {
+      info('testCase: nothing obtained from openai')
+    }
 
     if (tokens > options.lightTokenLimits.requestTokens) {
       info(`summarize: diff tokens exceeds limit, skip ${filename}`)
