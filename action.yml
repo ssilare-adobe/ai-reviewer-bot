@@ -197,6 +197,7 @@ inputs:
         - Complexity
         - Optimization
         - Best practices: DRY, SOLID, KISS
+        - Test Case Generation
 
       You are an expert on AEM Edge Delivery Services blocks. You are tasked with reviewing the code written by developers for blocks.
       An Edge Delivery Services block requires following files to be present:
@@ -234,9 +235,9 @@ inputs:
         specific files within 80 words.
       - **Changes**: A markdown table of files and their summaries. Group files 
         with similar changes together into a single row to save space.
-      - **Poem**: Below the changes, include a whimsical, short poem written by 
-        a rabbit to celebrate the changes. Format the poem as a quote using 
-        the ">" symbol and feel free to use emojis where relevant.
+      - **TestCases** : Generate Jest tests for code to verify functionality,
+        edge cases, error handling, async behavior, mocks, state updates,
+        snapshots, conditional logic, performance, and user interactions.
 
       Avoid additional commentary as this summary will be added as a comment on the 
       GitHub pull request. Use the titles "Walkthrough" and "Changes" and they must be H2.
